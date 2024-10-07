@@ -2,128 +2,170 @@
 @font-face {
     font-family: 'VulfRegular';
     src: url('font/Vulf-Regular.woff2') format('woff2'),
-         url('font/Vulf-Regular.woff') format('woff');
-  }
-  
-  @font-face {
+        url('font/Vulf-Regular.woff') format('woff');
+}
+
+@font-face {
     font-family: 'VulfBold';
     src: url('font/Vulf-Bold.woff2') format('woff2'),
-         url('font/Vulf-Bold.woff') format('woff');
-  }
-  
-  /* Uso del font */
-  body {
+        url('font/Vulf-Bold.woff') format('woff');
+}
+
+/* Uso del font */
+body {
     font-family: 'VulfRegular', Arial, sans-serif;
     line-height: 1.6;
     background-color: #F20089 !important;
     color: #000000 !important;
-  }
-  
-  .bold-text, h1, h2, h3 {
+}
+
+.bold-text,
+h1,
+h2,
+h3 {
     font-family: 'VulfBold', Arial, sans-serif;
     color: #000000 !important;
-  }
-  
-  
-  /* For regular text */
-  p, span, li {
-    font-weight: 400; /* Regular weight */
+}
+
+
+/* For regular text */
+p,
+span,
+li {
+    font-weight: 400;
+    /* Regular weight */
     color: #000000 !important;
-  }
-  
-  /* For bold text */
-  h1, h2, h3, .bold-text {
-    font-weight: 700; /* Bold weight */
+}
+
+/* For bold text */
+h1,
+h2,
+h3,
+.bold-text {
+    font-weight: 700;
+    /* Bold weight */
     color: #000000 !important;
-  }
-  
-  
-  /* Navbar customization */
-  .navbar {
-    color: #F20089 !important; 
+}
+
+
+/* Navbar customization */
+.navbar {
+    color: #F20089 !important;
     border-bottom: 5px solid #000000;
-  }
-  
-  
-  .nav-link {
+}
+
+
+.nav-link {
     color: #f8f9fa !important;
-  }
-  
-  .nav-link:hover {
+}
+
+.nav-link:hover {
     color: #bdc3c7 !important;
-  }
-  
-  /* Hero section styling */
-  header {
-    background-color: #F20089 !important; 
-    background-image: linear-gradient(135deg, #F20089 0%, #A100F2 100%);
-    padding: 4rem 0;
-  }
-  
-  header h1 {
+}
+
+/* Hero section styling */
+
+/* Position the video as a background */
+.header-section {
+    position: relative;
+    overflow: hidden;
+    height: 100vh;
+    /* or adjust as needed */
+}
+
+.bg-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+
+/* Overlay content styling */
+.content-overlay {
+    position: relative;
+    z-index: 2;
+}
+
+.header-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    /* Dark overlay for readability */
+    z-index: 1;
+}
+
+
+header h1 {
     font-size: 3rem;
     margin-bottom: 1rem;
-  }
-  
-  header p {
+}
+
+header p {
     font-size: 1.2rem;
-  }
-  
-  header .btn-light {
+}
+
+header .btn-light {
     color: #000000 !important;
     background-color: #000000 !important;
     border: none;
-  }
-  
-  header .btn-light:hover {
+}
+
+header .btn-light:hover {
     color: #000000 !important;
     background-color: #0AF004 !important;
-  }
-  
-  /* Card styling */
-  .card {
+}
+
+/* Card styling */
+.card {
     border: none;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: transform 0.2s ease-in-out;
-  }
-  
-  .card:hover {
+}
+
+.card:hover {
     transform: scale(1.05);
-  }
-  
-  .card-title {
+}
+
+.card-title {
     font-weight: bold;
     color: #333;
-  }
-  
-  .card-text {
+}
+
+.card-text {
     color: #555;
-  }
-  
-  /* Footer styling */
-  footer {
+}
+
+/* Footer styling */
+footer {
     background-color: #F20089;
-   
-  }
-  
-  footer p {
+
+}
+
+footer p {
     margin: 0;
     font-size: 0.9rem;
-  }
-  
-  /* Responsive adjustments */
-  @media (max-width: 768px) {
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
     header h1 {
-      font-size: 2.5rem;
+        font-size: 2.5rem;
     }
-  
+
     header p {
-      font-size: 1rem;
+        font-size: 1rem;
     }
-  
+
     .card {
-      margin-bottom: 1.5rem;
+        margin-bottom: 1.5rem;
     }
-  }
-  
+}
