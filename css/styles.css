@@ -41,7 +41,8 @@ body {
   
   /* Navbar customization */
   .navbar {
-    background-color: #F20089; /* Darker shade for navbar */
+    color: #F20089;
+    border-bottom: #000000 5px;
   }
   
   
@@ -104,7 +105,7 @@ body {
   /* Footer styling */
   footer {
     background-color: #F20089;
-    color: #000000;
+   
   }
   
   footer p {
