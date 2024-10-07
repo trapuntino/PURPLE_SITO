@@ -56,8 +56,8 @@ body {
   
   /* Hero section styling */
   header {
-    background-color: #3498db;
-    background-image: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
+    background-color: #F20089;
+    background-image: linear-gradient(135deg, #F20089 0%, #A100F2 100%);
     padding: 4rem 0;
   }
   
@@ -71,14 +71,14 @@ body {
   }
   
   header .btn-light {
-    color: #3498db;
-    background-color: #f8f9fa;
+    color: #000000;
+    background-color: #000000;
     border: none;
   }
   
   header .btn-light:hover {
-    color: #f8f9fa;
-    background-color: #2980b9;
+    color: #000000;
+    background-color: #0AF004;
   }
   
   /* Card styling */
