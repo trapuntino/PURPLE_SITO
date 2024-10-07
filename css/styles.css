@@ -1,24 +1,25 @@
-/* Importing custom Vulf fonts */
+/* Font in formato WOFF */
 @font-face {
-    font-family: 'Vulf';
-    src: url('font/VulfSans-Regular.otf') format('opentype');
-    font-weight: 400;
-    font-style: normal;
+    font-family: 'VulfRegular';
+    src: url('font/Vulf-Regular.woff2') format('woff2'),
+         url('font/Vulf-Regular.woff') format('woff');
   }
   
   @font-face {
-    font-family: 'Vulf';
-    src: url('font/VulfSans-Bold.otf') format('opentype');
-    font-weight: 700;
-    font-style: normal;
+    font-family: 'VulfBold';
+    src: url('font/Vulf-Bold.woff2') format('woff2'),
+         url('font/Vulf-Bold.woff') format('woff');
   }
   
-  /* Applying the custom fonts */
+  /* Uso del font */
   body {
-    font-family: 'Vulf', Arial, sans-serif;
-    line-height: 1.6;
-    color: #000000;
+    font-family: 'VulfRegular', Arial, sans-serif;
   }
+  
+  .bold-text, h1, h2, h3 {
+    font-family: 'VulfBold', Arial, sans-serif;
+  }
+  
   
   /* For regular text */
   p, span, li {
