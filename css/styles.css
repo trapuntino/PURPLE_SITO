@@ -1,3 +1,36 @@
+/* Importing custom Vulf fonts */
+@font-face {
+    font-family: 'Vulf';
+    src: url('/font/VulfSans-Regular.otf') format('opentype');
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'Vulf';
+    src: url('/font/VulfSans-Bold.otf') format('opentype');
+    font-weight: 700;
+    font-style: normal;
+  }
+  
+  /* Applying the custom fonts */
+  body {
+    font-family: 'Vulf', Arial, sans-serif;
+    line-height: 1.6;
+    color: #000000;
+  }
+  
+  /* For regular text */
+  p, span, li {
+    font-weight: 400; /* Regular weight */
+  }
+  
+  /* For bold text */
+  h1, h2, h3, .bold-text {
+    font-weight: 700; /* Bold weight */
+  }
+  
+
 /* General body styling */
 body {
     font-family: Arial, sans-serif;
@@ -10,11 +43,6 @@ body {
     background-color: #F20089; /* Darker shade for navbar */
   }
   
-  .navbar-brand {
-    font-weight: bold;
-    font-size: 1.5rem;
-    color: #f8f9fa !important;
-  }
   
   .nav-link {
     color: #f8f9fa !important;
@@ -74,8 +102,8 @@ body {
   
   /* Footer styling */
   footer {
-    background-color: #2c3e50;
-    color: #f8f9fa;
+    background-color: #F20089;
+    color: #000000;
   }
   
   footer p {
