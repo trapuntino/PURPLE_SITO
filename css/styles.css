@@ -1,14 +1,14 @@
 /* Importing custom Vulf fonts */
 @font-face {
     font-family: 'Vulf';
-    src: url('/font/VulfSans-Regular.otf') format('opentype');
+    src: url('font/VulfSans-Regular.otf') format('opentype');
     font-weight: 400;
     font-style: normal;
   }
   
   @font-face {
     font-family: 'Vulf';
-    src: url('/font/VulfSans-Bold.otf') format('opentype');
+    src: url('font/VulfSans-Bold.otf') format('opentype');
     font-weight: 700;
     font-style: normal;
   }
