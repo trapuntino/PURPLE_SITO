@@ -13,7 +13,7 @@
 
 /* Uso del font */
 body {
-    font-family: 'VulfRegular', Arial, sans-serif;
+    font-family: 'Vulf', Arial, sans-serif;
     line-height: 1.6;
     background-color: #F20089 !important;
     color: #000000 !important;
@@ -23,7 +23,7 @@ body {
 h1,
 h2,
 h3 {
-    font-family: 'VulfBold', Arial, sans-serif;
+    font-family: 'Vulf', Arial, sans-serif;
     color: #000000 !important;
 }
 
