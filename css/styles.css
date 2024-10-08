@@ -67,18 +67,17 @@ h3,
 }
 
 /* Customize dropdown menu color */
-.dropdown-menu {
+.offcanvas {
     background-color: #F20089;
-}
-
-.dropdown-item {
+  }
+  
+  .offcanvas .nav-link {
     color: #000000;
-}
-
-.dropdown-item:hover {
-    background-color: #bdc3c7;
-    color: #333333;
-}
+  }
+  
+  .offcanvas .nav-link:hover {
+    color: #0AF004;
+  }
 
 
 /* Hero section styling */
