@@ -77,11 +77,28 @@ h3,
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
     object-fit: cover;
     transform: translate(-50%, -50%);
     z-index: 1;
+    min-width: 100%;
+    min-height: 100%;
+}
+
+/* Ensure full coverage on smaller screens */
+@media (max-aspect-ratio: 16/9) {
+    .bg-video {
+        height: 100vh;
+        width: auto;
+    }
+}
+
+@media (min-aspect-ratio: 16/9) {
+    .bg-video {
+        width: 100vw;
+        height: auto;
+    }
 }
 
 /* Overlay content styling */
@@ -146,7 +163,8 @@ header .btn-light:hover {
 
 /* Footer styling */
 footer {
-    background-color: #F20089;
+    background-color: #F20089 !important;
+    color: #000000 !important;
 
 }
 
