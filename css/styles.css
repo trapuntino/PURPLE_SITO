@@ -50,17 +50,17 @@ h3,
 
 /* Navbar customization */
 .navbar {
-    color: #F20089 !important;
-    border-bottom: 5px solid #000000;
+    background-color: #F20089 !important; /* Setting the navbar background color */
+    border-bottom: 5px solid #000000 !important; /* Adding a black bottom border */
+    color: #ffffff !important; /* Ensuring text color is visible against the background */
 }
 
-
-.nav-link {
-    color: #f8f9fa !important;
+.navbar .nav-link {
+    color: #000000 !important; /* Link color */
 }
 
-.nav-link:hover {
-    color: #bdc3c7 !important;
+.navbar .nav-link:hover {
+    color: #bdc3c7 !important; /* Hover color for links */
 }
 
 /* Hero section styling */
@@ -164,7 +164,7 @@ header .btn-light:hover {
 /* Footer styling */
 footer {
     background-color: #F20089 !important;
-    color: #000000 !important;
+    
 
 }
 
