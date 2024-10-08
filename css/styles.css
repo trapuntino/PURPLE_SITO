@@ -1,12 +1,12 @@
 /* Font in formato WOFF */
 @font-face {
-    font-family: 'VulfRegular';
+    font-family: 'Vulf';
     src: url('font/Vulf-Regular.woff2') format('woff2'),
         url('font/Vulf-Regular.woff') format('woff');
 }
 
 @font-face {
-    font-family: 'VulfBold';
+    font-family: 'Vulf';
     src: url('font/Vulf-Bold.woff2') format('woff2'),
         url('font/Vulf-Bold.woff') format('woff');
 }
@@ -59,7 +59,7 @@ h3,
 
 /* Customize link colors */
 .nav-link {
-    font-family: 'VulfBold', Arial, sans-serif; /* Custom font */
+    font-family: 'Vulf', Arial, sans-serif; /* Custom font */
     font-size: 1rem; /* Adjust as needed */
     color: #000000 !important;
     font-weight: 700;
@@ -77,7 +77,7 @@ h3,
   }
   
   .offcanvas .nav-link {
-    font-family: 'VulfBold', Arial, sans-serif; /* Custom font */
+    font-family: 'Vulf', Arial, sans-serif; /* Custom font */
     font-size: 1rem; /* Adjust as needed */
     color: #000000;
   }
