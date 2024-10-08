@@ -23,6 +23,8 @@ body {
     line-height: 1.6;
     background-color: #F20089 !important;
     color: #000000 !important;
+
+    cursor: url('/media/images/CURSOR.png'), auto;
 }
 
 .bold-text,
