@@ -19,7 +19,7 @@
 
 /* Uso del font */
 body {
-    font-family: 'Vulf', Arial, sans-serif;
+    font-family: 'Vulf';
     line-height: 1.6;
     background-color: #F20089 !important;
     color: #000000 !important;
@@ -29,7 +29,7 @@ body {
 h1,
 h2,
 h3 {
-    font-family: 'Vulf', Arial, sans-serif;
+    font-family: 'Vulf';
     color: #000000 !important;
 }
 
@@ -38,6 +38,7 @@ h3 {
 p,
 span,
 li {
+    font-family: 'Vulf';
     font-weight: 400;
     /* Regular weight */
     color: #000000 !important;
@@ -48,6 +49,7 @@ h1,
 h2,
 h3,
 .bold-text {
+    font-family: 'Vulf';   
     font-weight: 700;
     /* Bold weight */
     color: #000000 !important;
@@ -59,14 +61,17 @@ h3,
 
 /* Adjust background and border color */
 .navbar {
+    font-family: 'Vulf'; /* Custom font */
+    font-weight: 700;
     background-color: #F20089 !important;
     border-bottom: 5px solid #000000;
 }
 
 /* Customize link colors */
 .nav-link {
-    font-family: 'Vulf', Arial, sans-serif; /* Custom font */
-    font-size: 1rem; /* Adjust as needed */
+    font-family: 'Vulf'; /* Custom font */
+    font-weight: 700;
+    font-size: 1.7rem; /* Adjust as needed */
     color: #000000 !important;
     font-weight: 700;
 }
@@ -83,12 +88,15 @@ h3,
   }
   
   .offcanvas .nav-link {
-    font-family: 'Vulf', Arial, sans-serif; /* Custom font */
+    font-family: 'Vulf'; /* Custom font */
+    font-weight: 700;
     font-size: 1rem; /* Adjust as needed */
     color: #000000;
   }
   
   .offcanvas .nav-link:hover {
+    font-family: 'Vulf'; /* Custom font */
+    font-weight: 700;
     color: #0AF004;
   }
 
@@ -160,18 +168,24 @@ header p {
 }
 
 header .btn-light {
+    font-family: 'Vulf';
+    font-weight: 700;
     color: #ffffff !important;
     background-color: #000000 !important;
     border: none;
 }
 
 header .btn-light:hover {
+    font-family: 'Vulf';
+    font-weight: 700;
     color: #000000 !important;
     background-color: #0AF004 !important;
 }
 
 /* Card styling */
 .card {
+    font-family: 'Vulf';
+    font-weight: 700;
     border: none;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -191,16 +205,37 @@ header .btn-light:hover {
     color: #555;
 }
 
-/* Footer styling */
 footer {
     background-color: #F20089 !important;
-    
-
+    color: #ffffff; /* Sets text color inside footer */
+    padding: 1rem 0; /* Adds some vertical padding */
+    text-align: center; /* Centers the text */
 }
 
+/* Footer styling */
+footer {
+    background-color: #F20089 !important; /* Ensures footer background is set */
+    color: #ffffff !important; /* Forces all text inside the footer to be white */
+    padding: 1rem 0;
+    text-align: center;
+}
+
+/* Styling for footer paragraphs */
 footer p {
     margin: 0;
     font-size: 0.9rem;
+    color: #000000 !important; /* Ensures paragraph text stays white */
+}
+
+/* Styling for footer links */
+footer a {
+    color: #000000 !important; /* Ensures links are white by default */
+    text-decoration: none; /* Removes underline from links */
+}
+
+footer a:hover {
+    color: #0AF004 !important; /* Optional: Lighter color on hover */
+    text-decoration: underline; /* Adds underline on hover for emphasis */
 }
 
 /* Responsive adjustments */
