@@ -59,6 +59,8 @@ h3,
 
 /* Customize link colors */
 .nav-link {
+    font-family: 'VulfBold', Arial, sans-serif; /* Custom font */
+    font-size: 1rem; /* Adjust as needed */
     color: #000000 !important;
     font-weight: 700;
 }
@@ -75,6 +77,8 @@ h3,
   }
   
   .offcanvas .nav-link {
+    font-family: 'VulfBold', Arial, sans-serif; /* Custom font */
+    font-size: 1rem; /* Adjust as needed */
     color: #000000;
   }
   
