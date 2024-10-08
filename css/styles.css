@@ -1,14 +1,18 @@
-/* Font in formato WOFF */
 @font-face {
     font-family: 'Vulf';
     src: url('font/Vulf-Regular.woff2') format('woff2'),
-        url('font/Vulf-Regular.woff') format('woff');
+         url('font/Vulf-Regular.woff') format('woff');
+    font-weight: 400; /* Standard weight for regular */
+    font-style: normal;
 }
 
+/* Bold weight */
 @font-face {
     font-family: 'Vulf';
     src: url('font/Vulf-Bold.woff2') format('woff2'),
-        url('font/Vulf-Bold.woff') format('woff');
+         url('font/Vulf-Bold.woff') format('woff');
+    font-weight: 700; /* Standard weight for bold */
+    font-style: normal;
 }
 
 /* Uso del font */
