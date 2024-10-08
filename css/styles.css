@@ -60,15 +60,18 @@ h3,
 /* Customize link colors */
 .nav-link {
     color: #000000 !important;
+    font-weight: 700;
 }
 
 .nav-link:hover {
     color: #0AF004 !important;
+    font-weight: 700;
 }
 
 /* Customize dropdown menu color */
 .offcanvas {
-    background-color: #F20089;
+    background-color: #F20089 !important;
+    border: 5px solid #000000;
   }
   
   .offcanvas .nav-link {
