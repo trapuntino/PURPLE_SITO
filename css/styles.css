@@ -83,6 +83,12 @@ nav .nav-link {
 }
 
 /* Customize dropdown menu color */
+
+#offcanvasNavbar.offcanvas {
+    width: 50vw !important; /* Set the width to 50% of the viewport */
+}
+
+
 .offcanvas {
     background-color: #F20089 !important;
     border: 5px solid #000000;
