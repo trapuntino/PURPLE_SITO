@@ -194,7 +194,7 @@ nav .nav-link {
 
 /* Overlay content styling */
 .content-overlay {
-    position: relative;
+   
     z-index: 2;
 }
 
@@ -212,7 +212,7 @@ nav .nav-link {
 
 
 header h1 {
-    font-size: 5rem;
+    font-size: 3rem;
     margin-bottom: 1rem;
 }
 
