@@ -17,6 +17,28 @@
 }
 
 
+/* Fullscreen overlay for the loading screen */
+#loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #000; /* Optional background color */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+/* Video styling for loading screen */
+#loading-video {
+    width: 100%;
+    height: auto;
+    max-height: 100%;
+    object-fit: cover;
+}
+
 /* Uso del font */
 body {
     font-family: 'Vulf';
