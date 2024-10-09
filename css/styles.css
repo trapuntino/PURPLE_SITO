@@ -162,36 +162,6 @@ nav .nav-link {
     min-height: 100%;
 }
 
-/* Center the content overlay */
-.content-overlay {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 2; /* Place content above the video */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    color: #ffffff;
-}
-
-/* Ensure full coverage on smaller screens */
-@media (max-aspect-ratio: 16/9) {
-    .bg-video {
-        height: 100vh;
-        width: auto;
-    }
-}
-
-@media (min-aspect-ratio: 16/9) {
-    .bg-video {
-        width: 100vw;
-        height: auto;
-    }
-}
-
 /* Overlay content styling */
 .content-overlay {
     position: absolute;  /* Position overlay absolutely within header */
@@ -241,6 +211,22 @@ header .btn-light:hover {
     color: #000000 !important;
     background-color: #0AF004 !important;
 }
+
+/* Ensure full coverage on smaller screens */
+@media (max-aspect-ratio: 16/9) {
+    .bg-video {
+        height: 100vh;
+        width: auto;
+    }
+}
+
+@media (min-aspect-ratio: 16/9) {
+    .bg-video {
+        width: 100vw;
+        height: auto;
+    }
+}
+
 
 
 /* Card styling */
