@@ -194,10 +194,19 @@ nav .nav-link {
 
 /* Overlay content styling */
 .content-overlay {
-   
+    position: absolute;  /* Position overlay absolutely within header */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);  /* Center horizontally and vertically */
     z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: #ffffff;
 }
 
+/* Dark overlay for readability */
 .header-section::before {
     content: '';
     position: absolute;
@@ -206,11 +215,10 @@ nav .nav-link {
     width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, 0.5);
-    /* Dark overlay for readability */
     z-index: 1;
 }
 
-
+/* Header text styling */
 header h1 {
     font-size: 3rem;
     margin-bottom: 1rem;
@@ -220,6 +228,7 @@ header p {
     font-size: 1.2rem;
 }
 
+/* Button styling */
 header .btn-light {
     font-family: 'Vulf';
     font-weight: 700;
@@ -229,11 +238,10 @@ header .btn-light {
 }
 
 header .btn-light:hover {
-    font-family: 'Vulf';
-    font-weight: 700;
     color: #000000 !important;
     background-color: #0AF004 !important;
 }
+
 
 /* Card styling */
 .card {
