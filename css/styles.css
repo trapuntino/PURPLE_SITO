@@ -24,7 +24,7 @@
     left: 0;
     width: 100vw;
     height: 100vh;
-    background-color: #000; /* Optional background color */
+    background-color: #000;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -37,6 +37,14 @@
     height: auto;
     max-height: 100%;
     object-fit: cover;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    #loading-video {
+        width: 100vw; /* Ensure full viewport width on mobile */
+        height: 100vh; /* Ensure it covers the height of the viewport */
+    }
 }
 
 /* Uso del font */
