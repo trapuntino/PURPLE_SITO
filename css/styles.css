@@ -55,13 +55,7 @@ body {
     color: #000000 !important;
 }
 
-.bold-text,
-h1,
-h2,
-h3 {
-    font-family: 'Vulf';
-    color: #000000 !important;
-}
+
 
 
 /* For regular text */
@@ -168,6 +162,21 @@ nav .nav-link {
     min-height: 100%;
 }
 
+/* Center the content overlay */
+.content-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2; /* Place content above the video */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #ffffff;
+}
+
 /* Ensure full coverage on smaller screens */
 @media (max-aspect-ratio: 16/9) {
     .bg-video {
@@ -203,7 +212,7 @@ nav .nav-link {
 
 
 header h1 {
-    font-size: 3rem;
+    font-size: 5rem;
     margin-bottom: 1rem;
 }
 
@@ -262,9 +271,8 @@ footer {
 /* Footer styling */
 footer {
     background-color: #F20089 !important;
-    /* Ensures footer background is set */
     color: #ffffff !important;
-    /* Forces all text inside the footer to be white */
+    border-top: 5px solid #000000;
     padding: 1rem 0;
     text-align: center;
 }
