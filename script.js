@@ -98,3 +98,5 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 });
 
+console.log("Random color array:", headerColors);
+console.log("Selected random color:", randomColor);
