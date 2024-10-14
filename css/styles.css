@@ -355,10 +355,13 @@ footer a:hover {
     z-index: 1000;
     overflow: hidden;
     resize: both;
-    /* For quick resize in some browsers */
-    animation: fadeIn 0.5s ease-in;
 
 
+}
+
+.project-window:hover {
+    transform: scale(1.00); /* Slightly enlarge on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Increase shadow depth */
 }
 
 .window-content {
@@ -375,6 +378,7 @@ footer a:hover {
     font-weight: 700;
     border-bottom: 5px solid #000000;
 }
+
 
 
 
@@ -449,12 +453,3 @@ footer a:hover {
     height: 100%;
 }
 
-@keyframes fadeIn {
-    0% {
-        opacity: 0;
-    }
-
-    100% {
-        opacity: 1;
-    }
-}
