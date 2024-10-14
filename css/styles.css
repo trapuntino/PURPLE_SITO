@@ -42,8 +42,10 @@
 /* Responsive adjustments for smaller screens */
 @media (max-width: 768px) {
     #loading-video {
-        width: 100vw; /* Ensure full viewport width on mobile */
-        height: 100vh; /* Ensure it covers the height of the viewport */
+        width: 100vw;
+        /* Ensure full viewport width on mobile */
+        height: 100vh;
+        /* Ensure it covers the height of the viewport */
     }
 }
 
@@ -96,7 +98,8 @@ h3,
 nav .nav-link {
     font-family: 'Vulf', Arial, sans-serif;
     font-weight: 700;
-    font-size: 1.7rem !important; /* Forces font size */
+    font-size: 1.7rem !important;
+    /* Forces font size */
     color: #000000 !important;
 }
 
@@ -111,8 +114,10 @@ nav .nav-link {
 
 
 #offcanvasNavbar.offcanvas {
-    width: 50vw !important;  /* Set the off-canvas width to 50% of the viewport */
-    max-width: 50vw !important; /* Ensures it doesn't exceed 50vw */
+    width: 50vw !important;
+    /* Set the off-canvas width to 50% of the viewport */
+    max-width: 50vw !important;
+    /* Ensures it doesn't exceed 50vw */
 }
 
 
@@ -164,10 +169,12 @@ nav .nav-link {
 
 /* Overlay content styling */
 .content-overlay {
-    position: absolute;  /* Position overlay absolutely within header */
+    position: absolute;
+    /* Position overlay absolutely within header */
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);  /* Center horizontally and vertically */
+    transform: translate(-50%, -50%);
+    /* Center horizontally and vertically */
     z-index: 2;
     display: flex;
     flex-direction: column;
@@ -317,12 +324,14 @@ footer a:hover {
 
 /* Responsive adjustments for cards */
 .project-card .card {
-    height: 100%; /* Ensures consistent card height */
+    height: 100%;
+    /* Ensures consistent card height */
 }
 
 .project-card .card-img-top {
     object-fit: cover;
-    height: 200px; /* Ensures consistent image height */
+    height: 200px;
+    /* Ensures consistent image height */
 }
 
 .project-card {
@@ -333,38 +342,119 @@ footer a:hover {
     display: none;
 }
 
-/* Window overlay styling */
+/* Project Window Styling */
 .project-window {
     position: absolute;
-    top: 20px;
-    left: 20px;
-    width: 400px;
-    background: #fff;
-    border: 1px solid #ddd;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 75vw;
+    /* Initial width */
+    height: 75vh;
+    /* Initial height */
+    background: #ffffff;
+    border-radius: 0.25rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
     z-index: 1000;
+    overflow: hidden;
+    resize: both;
+    /* For quick resize in some browsers */
+    animation: fadeIn 0.5s ease-in;
+
+
 }
 
-.project-window .window-header {
-    background-color: #007bff;
-    color: white;
-    padding: 0.5rem;
-    cursor: move;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.window-content {
+    background-color: #F20089;
+ 
 }
 
-.project-window .window-content {
-    padding: 1rem;
-    overflow-y: auto;
-    max-height: 300px; /* Limit content height */
+/* Gradient background */
+
+.window-header {
+    background-color: #F20089;
+    /* Dark header */
+    color: #ffffff;
+    font-weight: 700;
+    border-bottom: 5px solid #000000;
 }
 
-.project-window .close-window {
-    background: none;
-    border: none;
-    color: white;
-    font-size: 1.2rem;
+
+
+/* Resizable handles */
+.resize-handle {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: #000000;
+    z-index: 1001;
     cursor: pointer;
+}
+
+/* Positioning each handle */
+.resize-handle.top-left {
+    top: -5px;
+    left: -5px;
+    cursor: nwse-resize;
+}
+
+.resize-handle.top-right {
+    top: -5px;
+    right: -5px;
+    cursor: nesw-resize;
+}
+
+.resize-handle.bottom-left {
+    bottom: -5px;
+    left: -5px;
+    cursor: nesw-resize;
+}
+
+.resize-handle.bottom-right {
+    bottom: -5px;
+    right: -5px;
+    cursor: nwse-resize;
+}
+
+.resize-handle.top {
+    top: -5px;
+    left: 50%;
+    cursor: ns-resize;
+    transform: translateX(-50%);
+    height: 10px;
+    width: 100%;
+}
+
+.resize-handle.bottom {
+    bottom: -5px;
+    left: 50%;
+    cursor: ns-resize;
+    transform: translateX(-50%);
+    height: 10px;
+    width: 100%;
+}
+
+.resize-handle.left {
+    left: -5px;
+    top: 50%;
+    cursor: ew-resize;
+    transform: translateY(-50%);
+    width: 10px;
+    height: 100%;
+}
+
+.resize-handle.right {
+    right: -5px;
+    top: 50%;
+    cursor: ew-resize;
+    transform: translateY(-50%);
+    width: 10px;
+    height: 100%;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
 }
