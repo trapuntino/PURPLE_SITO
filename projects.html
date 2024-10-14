@@ -12,8 +12,8 @@
 
 <body>
 
-     <!-- Navbar -->
-     <nav class="navbar navbar-expand-lg sticky-top bg-body-tertiary">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg sticky-top bg-body-tertiary">
         <div class="container-fluid">
             <a class="navbar-brand" href="index.html">
                 <img src="media/images/LOGO.png" alt="Logo" width="70" height="70"
@@ -21,8 +21,8 @@
             </a>
 
             <!-- Toggle button for off-canvas menu on mobile -->
-            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
-                data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+                aria-controls="offcanvasNavbar">
                 <span class="navbar-toggler-icon"></span>
             </button>
 
@@ -30,8 +30,8 @@
             <div class="collapse navbar-collapse d-none d-lg-flex">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"> <a class="nav-link" href="projects.html">Projects</a> </li>
-                        <li class="nav-item"> <a class="nav-link" href="about.html">About</a> </li>
-                        <li class="nav-item"> <a class="nav-link" href="contact.html">Contact</a> </li>
+                    <li class="nav-item"> <a class="nav-link" href="about.html">About</a> </li>
+                    <li class="nav-item"> <a class="nav-link" href="contact.html">Contact</a> </li>
                 </ul>
             </div>
 
@@ -51,6 +51,49 @@
             </div>
         </div>
     </nav>
+
+
+    <div class="container my-5">
+
+        <!-- Filter Section -->
+        <div class="filter-section text-center mb-4">
+            <button class="btn btn-outline-primary filter-btn" data-filter="all">All</button>
+            <button class="btn btn-outline-primary filter-btn" data-filter="web">Web Development</button>
+            <button class="btn btn-outline-primary filter-btn" data-filter="design">Design</button>
+            <button class="btn btn-outline-primary filter-btn" data-filter="branding">Branding</button>
+        </div>
+
+        <!-- Projects Grid -->
+        <div class="row" id="projects-container">
+            <!-- Project Card -->
+            <div class="col-lg-4 col-md-6 project-card">
+                <div class="card mb-4 shadow-sm">
+                    <img src="media/images/projects/BEFEST_V2.png" class="card-img-top" alt="Project 1">
+                    <div class="card-body">
+                        <h5 class="card-title">BEFEST_V2</h5>
+                        <p class="card-text">A brief description of the project.</p>
+                        <button class="btn btn-primary open-project" data-project="1">Open Project</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Additional project cards -->
+            <div class="col-lg-4 col-md-6 project-card">
+                <div class="card mb-4 shadow-sm">
+                    <img src="media/images/projects/BEFEST_V1.png" class="card-img-top" alt="Project 2">
+                    <div class="card-body">
+                        <h5 class="card-title">BEFEST_V1</h5>
+                        <p class="card-text">A brief description of the project.</p>
+                        <button class="btn btn-primary open-project" data-project="2">Open Project</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
 
     <!-- Footer -->
     <footer class="text-center py-4">
