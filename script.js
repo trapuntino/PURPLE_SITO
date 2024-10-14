@@ -28,7 +28,13 @@ document.addEventListener("DOMContentLoaded", () => {
         card.addEventListener("click", (e) => {
             const projectId = card.getAttribute("data-project");
             const projectData = projects[projectId];
-            if (projectData) {
+            
+            // Check if the screen width is mobile-sized
+            if (window.innerWidth <= 768) {
+                // Redirect to the project page for mobile devices
+                window.location.href = projectData.url;
+            } else {
+                // Otherwise, open the project in a draggable window
                 createProjectWindow(projectData.title, projectData.url, e.clientX, e.clientY);
             }
         });
@@ -88,57 +94,5 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    function makeResizable(element) {
-        const handles = element.querySelectorAll(".resize-handle");
-
-        handles.forEach(handle => {
-            handle.addEventListener("mousedown", (e) => {
-                e.preventDefault();
-                e.stopPropagation();
-
-                const initialWidth = element.offsetWidth;
-                const initialHeight = element.offsetHeight;
-                const initialX = e.clientX;
-                const initialY = e.clientY;
-
-                function resizeHandler(e) {
-                    const dx = e.clientX - initialX;
-                    const dy = e.clientY - initialY;
-
-                    if (handle.classList.contains("bottom-right")) {
-                        element.style.width = `${initialWidth + dx}px`;
-                        element.style.height = `${initialHeight + dy}px`;
-                    } else if (handle.classList.contains("bottom-left")) {
-                        element.style.width = `${initialWidth - dx}px`;
-                        element.style.height = `${initialHeight + dy}px`;
-                        element.style.left = `${element.offsetLeft + dx}px`;
-                    } else if (handle.classList.contains("top-right")) {
-                        element.style.width = `${initialWidth + dx}px`;
-                        element.style.height = `${initialHeight - dy}px`;
-                        element.style.top = `${element.offsetTop + dy}px`;
-                    } else if (handle.classList.contains("top-left")) {
-                        element.style.width = `${initialWidth - dx}px`;
-                        element.style.height = `${initialHeight - dy}px`;
-                        element.style.left = `${element.offsetLeft + dx}px`;
-                        element.style.top = `${element.offsetTop + dy}px`;
-                    } else if (handle.classList.contains("top")) {
-                        element.style.height = `${initialHeight - dy}px`;
-                        element.style.top = `${element.offsetTop + dy}px`;
-                    } else if (handle.classList.contains("bottom")) {
-                        element.style.height = `${initialHeight + dy}px`;
-                    } else if (handle.classList.contains("left")) {
-                        element.style.width = `${initialWidth - dx}px`;
-                        element.style.left = `${element.offsetLeft + dx}px`;
-                    } else if (handle.classList.contains("right")) {
-                        element.style.width = `${initialWidth + dx}px`;
-                    }
-                }
-
-                document.addEventListener("mousemove", resizeHandler);
-                document.addEventListener("mouseup", () => {
-                    document.removeEventListener("mousemove", resizeHandler);
-                }, { once: true });
-            });
-        });
-    }
+    
 });

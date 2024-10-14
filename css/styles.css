@@ -240,8 +240,8 @@ header .btn-light:hover {
 .card {
     font-family: 'Vulf';
     font-weight: 700;
-    border: none;
-    border-radius: 8px;
+    border: 5px solid #000000;
+    border-radius: 0px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: transform 0.2s ease-in-out;
 }
@@ -325,12 +325,14 @@ footer a:hover {
 /* Responsive adjustments for cards */
 .project-card .card {
     height: 100%;
+    width: 100%;
     /* Ensures consistent card height */
 }
 
 .project-card .card-img-top {
     object-fit: cover;
     height: 200px;
+    border-radius: 0px;
     /* Ensures consistent image height */
 }
 
@@ -350,9 +352,9 @@ footer a:hover {
     height: 75vh;
     /* Initial height */
     background: #ffffff;
-    border-radius: 0.25rem;
+   
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
-    z-index: 1000;
+    z-index: 1050;
     overflow: hidden;
     resize: both;
 
@@ -365,7 +367,7 @@ footer a:hover {
 }
 
 .window-content {
-    background-color: #F20089;
+    background-color: #000000;
  
 }
 
@@ -381,75 +383,4 @@ footer a:hover {
 
 
 
-
-/* Resizable handles */
-.resize-handle {
-    position: absolute;
-    width: 10px;
-    height: 10px;
-    background-color: #000000;
-    z-index: 1001;
-    cursor: pointer;
-}
-
-/* Positioning each handle */
-.resize-handle.top-left {
-    top: -5px;
-    left: -5px;
-    cursor: nwse-resize;
-}
-
-.resize-handle.top-right {
-    top: -5px;
-    right: -5px;
-    cursor: nesw-resize;
-}
-
-.resize-handle.bottom-left {
-    bottom: -5px;
-    left: -5px;
-    cursor: nesw-resize;
-}
-
-.resize-handle.bottom-right {
-    bottom: -5px;
-    right: -5px;
-    cursor: nwse-resize;
-}
-
-.resize-handle.top {
-    top: -5px;
-    left: 50%;
-    cursor: ns-resize;
-    transform: translateX(-50%);
-    height: 10px;
-    width: 100%;
-}
-
-.resize-handle.bottom {
-    bottom: -5px;
-    left: 50%;
-    cursor: ns-resize;
-    transform: translateX(-50%);
-    height: 10px;
-    width: 100%;
-}
-
-.resize-handle.left {
-    left: -5px;
-    top: 50%;
-    cursor: ew-resize;
-    transform: translateY(-50%);
-    width: 10px;
-    height: 100%;
-}
-
-.resize-handle.right {
-    right: -5px;
-    top: 50%;
-    cursor: ew-resize;
-    transform: translateY(-50%);
-    width: 10px;
-    height: 100%;
-}
 
