@@ -17,8 +17,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
 document.addEventListener("DOMContentLoaded", () => {
     const projects = {
-        1: { title: "Project 1", url: "index.html" },
-        2: { title: "Project 2", url: "index.html" },
+        1: { title: "Project 1", url: "projects/template.html" },
+        2: { title: "Project 2", url: "projects/template2.html" },
         // Add more projects as needed
     };
 

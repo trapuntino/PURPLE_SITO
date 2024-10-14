@@ -1,0 +1,460 @@
+@font-face {
+    font-family: 'Vulf';
+    src: url('font/VulfSans-Regular.woff2') format('woff2'),
+        url('font/VulfSans-Regular.woff') format('woff'),
+        url('font/VulfSans-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Vulf';
+    src: url('font/VulfSans-Bold.woff2') format('woff2'),
+        url('font/VulfSans-Bold.woff') format('woff'),
+        url('font/Vulf-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+
+/* Fullscreen overlay for the loading screen */
+#loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+/* Video styling for loading screen */
+#loading-video {
+    width: 100%;
+    height: auto;
+    max-height: 100%;
+    object-fit: cover;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    #loading-video {
+        width: 100vw;
+        /* Ensure full viewport width on mobile */
+        height: 100vh;
+        /* Ensure it covers the height of the viewport */
+    }
+}
+
+/* Uso del font */
+body {
+    font-family: 'Vulf';
+    line-height: 1.6;
+    background-color: #F20089 !important;
+    color: #000000 !important;
+}
+
+
+
+
+/* For regular text */
+p,
+span,
+li {
+    font-family: 'Vulf';
+    font-weight: 400;
+    /* Regular weight */
+    color: #000000 !important;
+}
+
+/* For bold text */
+h1,
+h2,
+h3,
+.bold-text {
+    font-family: 'Vulf';
+    font-weight: 700;
+    /* Bold weight */
+    color: #000000 !important;
+}
+
+
+/* Navbar customization */
+
+
+/* Adjust background and border color */
+.navbar {
+    font-family: 'Vulf';
+    /* Custom font */
+    font-weight: 700;
+    background-color: #F20089 !important;
+    border-bottom: 5px solid #000000;
+}
+
+/* Customize link colors */
+nav .nav-link {
+    font-family: 'Vulf', Arial, sans-serif;
+    font-weight: 700;
+    font-size: 1.7rem !important;
+    /* Forces font size */
+    color: #000000 !important;
+}
+
+
+.nav-link:hover {
+    color: #0AF004 !important;
+    font-weight: 700;
+}
+
+/* Customize dropdown menu color */
+
+
+
+#offcanvasNavbar.offcanvas {
+    width: 50vw !important;
+    /* Set the off-canvas width to 50% of the viewport */
+    max-width: 50vw !important;
+    /* Ensures it doesn't exceed 50vw */
+}
+
+
+
+.offcanvas {
+    background-color: #F20089 !important;
+    border: 5px solid #000000;
+}
+
+.offcanvas .nav-link {
+    font-family: 'Vulf';
+    /* Custom font */
+    font-weight: 700;
+    font-size: 1rem;
+    /* Adjust as needed */
+    color: #000000;
+}
+
+.offcanvas .nav-link:hover {
+    font-family: 'Vulf';
+    /* Custom font */
+    font-weight: 700;
+    color: #0AF004;
+}
+
+
+/* Hero section styling */
+
+/* Position the video as a background */
+.header-section {
+    position: relative;
+    overflow: hidden;
+    height: 100vh;
+    /* or adjust as needed */
+}
+
+.bg-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    min-width: 100%;
+    min-height: 100%;
+}
+
+/* Overlay content styling */
+.content-overlay {
+    position: absolute;
+    /* Position overlay absolutely within header */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* Center horizontally and vertically */
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: #ffffff;
+}
+
+/* Dark overlay for readability */
+.header-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+/* Header text styling */
+header h1 {
+    font-size: 7rem;
+    margin-bottom: 1rem;
+}
+
+header p {
+    font-size: 1.2rem;
+}
+
+/* Button styling */
+header .btn-light {
+    font-family: 'Vulf';
+    font-weight: 400;
+    color: #ffffff !important;
+    background-color: #000000 !important;
+    border: none;
+}
+
+header .btn-light:hover {
+    color: #000000 !important;
+    background-color: #0AF004 !important;
+}
+
+/* Ensure full coverage on smaller screens */
+@media (max-aspect-ratio: 16/9) {
+    .bg-video {
+        height: 100vh;
+        width: auto;
+    }
+}
+
+@media (min-aspect-ratio: 16/9) {
+    .bg-video {
+        width: 100vw;
+        height: auto;
+    }
+}
+
+
+
+/* Card styling */
+.card {
+    font-family: 'Vulf';
+    font-weight: 700;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card-title {
+    font-weight: bold;
+    color: #333;
+}
+
+.card-text {
+    color: #555;
+}
+
+footer {
+    background-color: #F20089 !important;
+    color: #ffffff;
+    /* Sets text color inside footer */
+    padding: 1rem 0;
+    /* Adds some vertical padding */
+    text-align: center;
+    /* Centers the text */
+}
+
+/* Footer styling */
+footer {
+    background-color: #F20089 !important;
+    color: #ffffff !important;
+    border-top: 5px solid #000000;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+/* Styling for footer paragraphs */
+footer p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #000000 !important;
+    /* Ensures paragraph text stays white */
+}
+
+/* Styling for footer links */
+footer a {
+    color: #000000 !important;
+    /* Ensures links are white by default */
+    text-decoration: none;
+    /* Removes underline from links */
+}
+
+footer a:hover {
+    color: #0AF004 !important;
+    /* Optional: Lighter color on hover */
+    text-decoration: underline;
+    /* Adds underline on hover for emphasis */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2.5rem;
+    }
+
+    header p {
+        font-size: 1rem;
+    }
+
+    .card {
+        margin-bottom: 1.5rem;
+    }
+}
+
+
+/* Ensures even spacing and alignment for the filter section */
+.filter-section .btn {
+    margin: 0.3rem;
+}
+
+/* Responsive adjustments for cards */
+.project-card .card {
+    height: 100%;
+    /* Ensures consistent card height */
+}
+
+.project-card .card-img-top {
+    object-fit: cover;
+    height: 200px;
+    /* Ensures consistent image height */
+}
+
+.project-card {
+    transition: all 0.3s ease;
+}
+
+.project-card.hide {
+    display: none;
+}
+
+/* Project Window Styling */
+.project-window {
+    position: absolute;
+    width: 75vw;
+    /* Initial width */
+    height: 75vh;
+    /* Initial height */
+    background: #ffffff;
+    border-radius: 0.25rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    z-index: 1000;
+    overflow: hidden;
+    resize: both;
+    /* For quick resize in some browsers */
+    animation: fadeIn 0.5s ease-in;
+
+
+}
+
+.window-content {
+    background-color: #F20089;
+ 
+}
+
+/* Gradient background */
+
+.window-header {
+    background-color: #F20089;
+    /* Dark header */
+    color: #ffffff;
+    font-weight: 700;
+    border-bottom: 5px solid #000000;
+}
+
+
+
+/* Resizable handles */
+.resize-handle {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: #000000;
+    z-index: 1001;
+    cursor: pointer;
+}
+
+/* Positioning each handle */
+.resize-handle.top-left {
+    top: -5px;
+    left: -5px;
+    cursor: nwse-resize;
+}
+
+.resize-handle.top-right {
+    top: -5px;
+    right: -5px;
+    cursor: nesw-resize;
+}
+
+.resize-handle.bottom-left {
+    bottom: -5px;
+    left: -5px;
+    cursor: nesw-resize;
+}
+
+.resize-handle.bottom-right {
+    bottom: -5px;
+    right: -5px;
+    cursor: nwse-resize;
+}
+
+.resize-handle.top {
+    top: -5px;
+    left: 50%;
+    cursor: ns-resize;
+    transform: translateX(-50%);
+    height: 10px;
+    width: 100%;
+}
+
+.resize-handle.bottom {
+    bottom: -5px;
+    left: 50%;
+    cursor: ns-resize;
+    transform: translateX(-50%);
+    height: 10px;
+    width: 100%;
+}
+
+.resize-handle.left {
+    left: -5px;
+    top: 50%;
+    cursor: ew-resize;
+    transform: translateY(-50%);
+    width: 10px;
+    height: 100%;
+}
+
+.resize-handle.right {
+    right: -5px;
+    top: 50%;
+    cursor: ew-resize;
+    transform: translateY(-50%);
+    width: 10px;
+    height: 100%;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
