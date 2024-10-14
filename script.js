@@ -19,10 +19,13 @@ document.addEventListener("DOMContentLoaded", () => {
     const projects = {
         1: { title: "Project 1", url: "projects/template.html" },
         2: { title: "Project 2", url: "projects/template2.html" },
-        // Add more projects as needed
+        // Add more projects with unique URLs as needed
     };
 
-    let zIndex = 1000;
+    // Array of hex color codes
+    const headerColors = ["#F20089", "#D900B8", "#BC00DD", "#A100F2", "#0AF004"];
+
+    let zIndex = 1050; // Starting z-index for project windows
 
     document.querySelectorAll(".project-card").forEach(card => {
         card.addEventListener("click", (e) => {
@@ -31,7 +34,7 @@ document.addEventListener("DOMContentLoaded", () => {
             
             // Check if the screen width is mobile-sized
             if (window.innerWidth <= 768) {
-                // Redirect to the project page for mobile devices
+                // Redirect to the same project page for mobile devices
                 window.location.href = projectData.url;
             } else {
                 // Otherwise, open the project in a draggable window
@@ -43,27 +46,28 @@ document.addEventListener("DOMContentLoaded", () => {
     function createProjectWindow(title, url, clickX, clickY) {
         const windowDiv = document.createElement("div");
         windowDiv.classList.add("project-window", "card", "shadow-lg");
-        windowDiv.style.zIndex = zIndex++;
+        windowDiv.style.zIndex = zIndex++; // Increment z-index for each new window
         windowDiv.style.left = `${clickX}px`;
         windowDiv.style.top = `${clickY}px`;
-        
+
+        // Use an iframe to load the project URL within the window
         windowDiv.innerHTML = `
             <div class="window-header card-header d-flex justify-content-between align-items-center">
                 <span>${title}</span>
                 <button class="btn-close close-window" aria-label="Close"></button>
             </div>
             <iframe src="${url}" class="window-content card-body" style="width: 100%; height: 100%; border: none;"></iframe>
-            <div class="resize-handle top-left"></div>
-            <div class="resize-handle top-right"></div>
-            <div class="resize-handle bottom-left"></div>
-            <div class="resize-handle bottom-right"></div>
-            <div class="resize-handle top"></div>
-            <div class="resize-handle bottom"></div>
-            <div class="resize-handle left"></div>
-            <div class="resize-handle right"></div>
         `;
 
         document.body.appendChild(windowDiv);
+
+        // Select a random color from the headerColors array
+        const randomColor = headerColors[Math.floor(Math.random() * headerColors.length)];
+        
+        // Apply the random color to the window header
+        const headerElement = windowDiv.querySelector(".window-header");
+        headerElement.style.backgroundColor = randomColor;
+        headerElement.style.color = "#ffffff"; // Set text color to white for better contrast
 
         // Close button functionality
         windowDiv.querySelector(".close-window").addEventListener("click", () => {
@@ -71,7 +75,6 @@ document.addEventListener("DOMContentLoaded", () => {
         });
 
         makeDraggable(windowDiv);
-        makeResizable(windowDiv);
     }
 
     function makeDraggable(element) {
@@ -93,6 +96,5 @@ document.addEventListener("DOMContentLoaded", () => {
             }, { once: true });
         });
     }
-
-    
 });
+

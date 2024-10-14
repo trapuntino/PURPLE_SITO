@@ -92,6 +92,7 @@ h3,
     font-weight: 700;
     background-color: #F20089 !important;
     border-bottom: 5px solid #000000;
+    z-index: 1020;
 }
 
 /* Customize link colors */
@@ -255,6 +256,11 @@ header .btn-light:hover {
     color: #333;
 }
 
+.card.header {
+
+    border-radius: 0px;
+}
+
 .card-text {
     color: #555;
 }
@@ -347,7 +353,7 @@ footer a:hover {
 /* Project Window Styling */
 .project-window {
     position: absolute;
-    width: 75vw;
+    width: 50vw;
     /* Initial width */
     height: 75vh;
     /* Initial height */
@@ -368,17 +374,18 @@ footer a:hover {
 
 .window-content {
     background-color: #000000;
- 
+ width: 0%;
 }
 
 /* Gradient background */
 
 .window-header {
-    background-color: #F20089;
+    
     /* Dark header */
     color: #ffffff;
     font-weight: 700;
     border-bottom: 5px solid #000000;
+
 }
 
 
