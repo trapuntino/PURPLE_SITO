@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 document.addEventListener("DOMContentLoaded", () => {
     const projects = {
-        1: { title: "Project 1", url: "projects/template.html" },
+        1: { title: "Befest_2023", url: "projects/befest_2023.html" },
         2: { title: "Project 2", url: "projects/template2.html" },
         // Add more projects with unique URLs as needed
     };

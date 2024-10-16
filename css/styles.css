@@ -251,19 +251,32 @@ header .btn-light:hover {
     transform: scale(1.05);
 }
 
-.card-title {
-    font-weight: bold;
-    color: #333;
+/* Make the card container square */
+.square-card-content {
+    position: relative;
+    width: 100%;
+    padding-top: 100%; /* Creates the square aspect ratio */
+    overflow: hidden;
 }
+
+/* Ensure the image fills the square container */
+.square-card-content .card-img-top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image covers the square container without distortion */
+}
+
+
 
 .card.header {
 
     border-radius: 0px;
 }
 
-.card-text {
-    color: #555;
-}
+
 
 footer {
     background-color: #F20089 !important;
@@ -337,7 +350,6 @@ footer a:hover {
 
 .project-card .card-img-top {
     object-fit: cover;
-    height: 200px;
     border-radius: 0px;
     /* Ensures consistent image height */
 }
