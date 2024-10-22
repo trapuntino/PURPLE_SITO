@@ -242,7 +242,7 @@ header .btn-light:hover {
     font-family: 'Vulf';
     font-weight: 700;
     border: 5px solid #000000;
-    border-radius: 0px;
+    border-radius: 0 !important;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: transform 0.2s ease-in-out;
 }
@@ -251,35 +251,50 @@ header .btn-light:hover {
     transform: scale(1.05);
 }
 
-/* Make the card container square */
+/* Ensure that #randomCardDisplay follows the same square layout as other cards */
+.square-card {
+    width: 100%;
+    /* Matches the grid width */
+}
+
+/* .square-card-content enforces a 1:1 aspect ratio for all square cards */
 .square-card-content {
     position: relative;
     width: 100%;
-    padding-top: 100%; /* Creates the square aspect ratio */
+    padding-top: 100%;
+    /* 1:1 aspect ratio */
     overflow: hidden;
 }
 
-/* Ensure the image fills the square container */
-.square-card-content .card-img-top {
+/* Style the image to fit the square container */
+.card-img-top {
     position: absolute;
+    border-radius: 0 !important;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Ensures the image covers the square container without distortion */
+    object-fit: cover;
+    /* Ensures the image fills the square without distortion */
 }
+
 
 /* Add vertical spacing between project cards on smaller screens */
 @media (max-width: 992px) {
     .project-card {
-        margin-bottom: 1.5rem; /* Adjust as needed */
+        margin-bottom: 1.5rem;
+        /* Adjust as needed */
     }
 }
 
 
 .card.header {
 
-    border-radius: 0px;
+
+    border-radius: 0 !important;
+    background-color: inherit;
+    /* Ensures consistent background if needed */
+
 }
 
 
@@ -342,21 +357,18 @@ footer a:hover {
 }
 
 
-/* Ensures even spacing and alignment for the filter section */
-.filter-section .btn {
-    margin: 0.3rem;
-}
 
 /* Responsive adjustments for cards */
 .project-card .card {
     height: 100%;
     width: 100%;
+    border-radius: 0 !important;
     /* Ensures consistent card height */
 }
 
 .project-card .card-img-top {
     object-fit: cover;
-    border-radius: 0px;
+    border-radius: 0 !important;
     /* Ensures consistent image height */
 }
 
@@ -376,7 +388,7 @@ footer a:hover {
     height: 75vh;
     /* Initial height */
     background: #ffffff;
-   
+
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
     z-index: 1050;
     overflow: hidden;
@@ -386,26 +398,25 @@ footer a:hover {
 }
 
 .project-window:hover {
-    transform: scale(1.00); /* Slightly enlarge on hover */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Increase shadow depth */
+    transform: scale(1.00);
+    /* Slightly enlarge on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    /* Increase shadow depth */
 }
 
 .window-content {
     background-color: #000000;
- width: 0%;
+    width: 0%;
 }
 
 /* Gradient background */
 
 .window-header {
-    
+
     /* Dark header */
     color: #ffffff;
     font-weight: 700;
+    border-radius: 0 !important;
     border-bottom: 5px solid #000000;
 
 }
-
-
-
-

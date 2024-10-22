@@ -151,51 +151,5 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 
-    // Function to create a draggable project window
-    function createProjectWindow(title, url, posX, posY) {
-        const windowDiv = document.createElement("div");
-        windowDiv.classList.add("project-window", "card", "shadow-lg");
-        windowDiv.style.zIndex = 1050;
-        windowDiv.style.left = `${posX}px`;
-        windowDiv.style.top = `${posY}px`;
-
-        windowDiv.innerHTML = `
-            <div class="window-header card-header d-flex justify-content-between align-items-center">
-                <span>${title}</span>
-                <button class="btn-close close-window" aria-label="Close"></button>
-            </div>
-            <iframe src="${url}" class="window-content card-body" style="width: 100%; height: 100%; border: none;"></iframe>
-        `;
-
-        document.body.appendChild(windowDiv);
-
-        // Close button functionality
-        windowDiv.querySelector(".close-window").addEventListener("click", () => {
-            document.body.removeChild(windowDiv);
-        });
-
-        makeDraggable(windowDiv);
-    }
-
-    // Function to make the window draggable
-    function makeDraggable(element) {
-        const header = element.querySelector(".window-header");
-        let offsetX, offsetY;
-
-        header.addEventListener("mousedown", (e) => {
-            offsetX = e.clientX - element.getBoundingClientRect().left;
-            offsetY = e.clientY - element.getBoundingClientRect().top;
-
-            function mouseMoveHandler(e) {
-                element.style.left = `${e.clientX - offsetX}px`;
-                element.style.top = `${e.clientY - offsetY}px`;
-            }
-
-            document.addEventListener("mousemove", mouseMoveHandler);
-            document.addEventListener("mouseup", () => {
-                document.removeEventListener("mousemove", mouseMoveHandler);
-            }, { once: true });
-        });
-    }
+    
 });
-
