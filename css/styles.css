@@ -420,3 +420,18 @@ footer a:hover {
     border-bottom: 5px solid #000000;
 
 }
+
+/* ----------------------------ABOUT--------------------------- */
+
+
+@keyframes wiggle {
+    0%, 100% { transform: rotate(0deg); }
+    25% { transform: rotate(3deg); }
+    50% { transform: rotate(-3deg); }
+    75% { transform: rotate(3deg); }
+}
+
+
+img.founder-wiggle:hover {
+    animation: wiggle 1s ease-in-out;
+}
