@@ -435,3 +435,19 @@ footer a:hover {
 img.founder-wiggle:hover {
     animation: wiggle 1s ease-in-out;
 }
+
+/* Optional: Add some spacing between rows */
+.row {
+    margin-bottom: 20px;
+}
+
+/* Ensure space between headings and paragraphs */
+h4 {
+    margin-top: 10px;
+    
+}
+
+p {
+    margin-top: 5px;
+}
+
