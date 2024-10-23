@@ -480,7 +480,7 @@ img.founder-wiggle:hover {
 
 @media (max-width: 768px) {
     .titolo-home {
-        font-size: 1.5rem;
+        font-size: 2rem;
         /* This could override the title styling on mobile */
         background-color: #0AF004 !important;
         border: 5px solid #000000;
