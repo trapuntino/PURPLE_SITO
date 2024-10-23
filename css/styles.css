@@ -479,9 +479,8 @@ img.founder-wiggle:hover {
 }
 
 @media (max-width: 768px) {
-    .titolo-home {
+    .container .titolo-home {
         font-size: 3rem !important;
-        /* This could override the title styling on mobile */
         background-color: #0AF004 !important;
         border: 5px solid #000000;
         padding-left: 30px;
@@ -489,6 +488,7 @@ img.founder-wiggle:hover {
         padding-bottom: 10px;
     }
 }
+
 
 .bordazzo {
     border: 5px solid #000000;
