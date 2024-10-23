@@ -431,15 +431,46 @@ footer a:hover {
     75% { transform: rotate(3deg); }
 }
 
+.founder-wiggle {
+    max-width: 400px; /* Set a max width */
+    max-height: 400px; /* Set a max height */
+    width: 100%; /* Ensure responsiveness */
+    height: auto; /* Maintain aspect ratio */
+}
 
 img.founder-wiggle:hover {
     animation: wiggle 1s ease-in-out;
 }
 
-/* Optional: Add some spacing between rows */
-.row {
-    margin-bottom: 20px;
+.titolo-sezione {
+
+    background-color: #0AF004 !important;
+    border: 5px solid #000000;
+    
+    
 }
+
+.titolo-home {
+
+    background-color: #0AF004 !important;
+    border: 5px solid #000000;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 10px;
+    
+    
+}
+
+.bordazzo {
+    border: 5px solid #000000;
+}
+
+
+
+
+
+/* Optional: Add some spacing between rows */
+
 
 /* Ensure space between headings and paragraphs */
 h4 {
