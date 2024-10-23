@@ -425,17 +425,34 @@ footer a:hover {
 
 
 @keyframes wiggle {
-    0%, 100% { transform: rotate(0deg); }
-    25% { transform: rotate(3deg); }
-    50% { transform: rotate(-3deg); }
-    75% { transform: rotate(3deg); }
+
+    0%,
+    100% {
+        transform: rotate(0deg);
+    }
+
+    25% {
+        transform: rotate(3deg);
+    }
+
+    50% {
+        transform: rotate(-3deg);
+    }
+
+    75% {
+        transform: rotate(3deg);
+    }
 }
 
 .founder-wiggle {
-    max-width: 400px; /* Set a max width */
-    max-height: 400px; /* Set a max height */
-    width: 100%; /* Ensure responsiveness */
-    height: auto; /* Maintain aspect ratio */
+    max-width: 400px;
+    /* Set a max width */
+    max-height: 400px;
+    /* Set a max height */
+    width: 100%;
+    /* Ensure responsiveness */
+    height: auto;
+    /* Maintain aspect ratio */
 }
 
 img.founder-wiggle:hover {
@@ -446,8 +463,8 @@ img.founder-wiggle:hover {
 
     background-color: #0AF004 !important;
     border: 5px solid #000000;
-    
-    
+
+
 }
 
 .titolo-home {
@@ -457,8 +474,20 @@ img.founder-wiggle:hover {
     padding-left: 30px;
     padding-right: 30px;
     padding-bottom: 10px;
-    
-    
+
+
+}
+
+@media (max-width: 768px) {
+    .titolo-home {
+        font-size: 1.5rem;
+        /* This could override the title styling on mobile */
+        background-color: #0AF004 !important;
+        border: 5px solid #000000;
+        padding-left: 30px;
+        padding-right: 30px;
+        padding-bottom: 10px;
+    }
 }
 
 .bordazzo {
@@ -475,10 +504,9 @@ img.founder-wiggle:hover {
 /* Ensure space between headings and paragraphs */
 h4 {
     margin-top: 10px;
-    
+
 }
 
 p {
     margin-top: 5px;
 }
-
