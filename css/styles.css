@@ -462,7 +462,8 @@ img.founder-wiggle:hover {
 .titolo-sezione {
 
     background-color: #0AF004 !important;
-    border: 3px solid #000000;
+    border: 5px solid #000000;
+    
 
 
 }
@@ -497,6 +498,56 @@ a.btn {
 .bordazzo {
     border: 5px solid #000000;
 }
+
+.bordosez {
+    background-color:  #D900B8;  
+    border-left: 5px solid #000000;
+    border-right: 5px solid #000000; 
+    margin-top: 0px !important;
+    margin-bottom: 0px !important;
+}
+
+.bordovez {
+    background-color:  #BC00DD; 
+    border-left: 5px solid #000000;
+    border-right: 5px solid #000000; 
+    border-bottom: 5px solid #000000;  
+    
+}
+
+/* Wrapper to hide overflow */
+.scrolling-text-wrapper {
+    width: 100%;
+    overflow: hidden; /* Hides the overflowing text */
+    white-space: nowrap; /* Prevents text from wrapping to the next line */
+}
+
+/* Scrolling text container */
+.scrolling-text {
+    display: inline-flex; /* Make sure the text is in a single horizontal line */
+    animation: scrollText 10s linear infinite; /* Animation duration and looping */
+}
+
+/* Keyframes for the scrolling effect */
+@keyframes scrollText {
+    0% {
+        transform: translateX(100%); /* Start off-screen to the right */
+    }
+    100% {
+        transform: translateX(-100%); /* End off-screen to the left */
+    }
+}
+
+h1 {
+    margin: 0; /* Ensure no default margins interfere */
+    padding: 0 2rem; /* Add spacing between the repeated phrases */
+    white-space: nowrap; /* Prevent the text from wrapping */
+}
+
+
+
+
+
 
 
 
