@@ -224,6 +224,31 @@ header .btn-light:hover {
     background-color: #0AF004 !important;
 }
 
+.titolo-home {
+
+    background-color: #0AF004 !important;
+    border: 5px solid #000000;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 10px;
+
+
+}
+
+
+@media (max-width: 768px) {
+    .container .titolo-home {
+        font-size: 5rem !important;
+        background-color: #0AF004 !important;
+        border: 5px solid #000000;
+        padding-left: 20px !important;
+        padding-right: 20px !important;
+        padding-bottom: 10px;
+    text-align: left;
+    }
+    
+}
+
 /* Ensure full coverage on smaller screens */
 @media (max-aspect-ratio: 16/9) {
     .bg-video {
@@ -474,29 +499,7 @@ img.founder-wiggle:hover {
 
 }
 
-.titolo-home {
 
-    background-color: #0AF004 !important;
-    border: 5px solid #000000;
-    padding-left: 30px;
-    padding-right: 30px;
-    padding-bottom: 10px;
-
-
-}
-
-
-@media (max-width: 768px) {
-    .container .titolo-home {
-        font-size: 3rem !important;
-        background-color: #0AF004 !important;
-        border: 5px solid #000000;
-        padding-left: 20px;
-        padding-right: 20px;
-        padding-bottom: 10px;
-    }
-    
-}
 
 @media (max-width: 768px) {
     h1.benvenuto {
