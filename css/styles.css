@@ -237,6 +237,14 @@ header .btn-light:hover {
 
 
 @media (max-width: 768px) {
+    
+    .container{
+
+        padding-left: 20px !important;
+        padding-right: 20px !important;
+
+    }
+    
     .container .titolo-home {
         font-size: 5rem !important;
         background-color: #0AF004 !important;
@@ -504,14 +512,28 @@ img.founder-wiggle:hover {
 @media (max-width: 768px) {
     h1.benvenuto {
 
-        font-size: 3.5rem !important;
+        font-size: 3rem !important;
     }
+
+    p,h4,
+.paragrafo {
+
+    text-align: justify;
+    padding-left: 50px !important;
+}
     
 }
 
 h1.benvenuto {
 
     font-size: 6rem;
+}
+
+p,h4,
+.paragrafo {
+
+    text-align: justify;
+    padding-left: 150px;
 }
 
 
