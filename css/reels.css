@@ -8,7 +8,7 @@ body, html {
 
 /* Reels container */
 .reels-container {
-    scroll-snap-type: y mandatory;
+    scroll-snap-type: y mandatory; /* Enable vertical snap scrolling */
     overflow-y: scroll;
     height: 100vh;
     display: flex;
@@ -17,9 +17,9 @@ body, html {
 
 /* Each Reel */
 .reel {
-    scroll-snap-align: start;
+    scroll-snap-align: start; /* Snap each reel to the top of the viewport */
     position: relative;
-    height: calc(100vh - 80px); /* Shorter height to avoid overlap */
+    height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -27,24 +27,19 @@ body, html {
 
 .reel-video {
     width: 100vw;
-    height: 100%;
+    height: 100vh;
     object-fit: cover;
 }
 
-/* Overlay Text */
-.overlay {
+/* Overlay Title Styling */
+.title-overlay {
     position: absolute;
     bottom: 20px;
     left: 20px;
     color: #fff;
-    background: rgba(0, 0, 0, 0.5);
-    padding: 10px;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 5px 10px;
+    font-size: 1.2rem;
     border-radius: 5px;
-}
-
-/* Mobile-specific adjustment for video height */
-@media (max-width: 768px) {
-    .reel {
-        height: calc(100vh - 100px); /* Adjust further if necessary for mobile */
-    }
+    font-weight: bold;
 }
