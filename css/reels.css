@@ -1,16 +1,8 @@
-/* General styling */
-body, html {
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    font-family: Arial, sans-serif;
-}
-
-/* Reels container */
+/* Reels container with adjusted height for mobile */
 .reels-container {
     scroll-snap-type: y mandatory;
     overflow-y: scroll;
-    height: 100vh;
+    height: calc(100vh - 20px); /* Adjusted for mobile browser elements */
     display: flex;
     flex-direction: column;
 }
@@ -19,19 +11,19 @@ body, html {
 .reel {
     scroll-snap-align: start;
     position: relative;
-    height: 100vh;
+    height: calc(100vh - 20px); /* Adjusted height */
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
+/* Overlay and Video remain unchanged */
 .reel-video {
     width: 100vw;
-    height: 100vh;
+    height: 100%;
     object-fit: cover;
 }
 
-/* Overlay Text */
 .overlay {
     position: absolute;
     bottom: 20px;
@@ -40,4 +32,11 @@ body, html {
     background: rgba(0, 0, 0, 0.5);
     padding: 10px;
     border-radius: 5px;
+}
+
+/* Media query for larger screens (optional, if only needed on mobile) */
+@media (min-width: 768px) {
+    .reels-container, .reel {
+        height: 100vh;
+    }
 }
