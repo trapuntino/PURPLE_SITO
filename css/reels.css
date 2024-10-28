@@ -1,0 +1,43 @@
+/* General styling */
+body, html {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+}
+
+/* Reels container */
+.reels-container {
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Each Reel */
+.reel {
+    scroll-snap-align: start;
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.reel-video {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+}
+
+/* Overlay Text */
+.overlay {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    border-radius: 5px;
+}

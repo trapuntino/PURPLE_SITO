@@ -77,6 +77,27 @@ document.addEventListener("DOMContentLoaded", () => {
         makeDraggable(windowDiv);
     }
 
+    document.addEventListener('DOMContentLoaded', function () {
+        const purpletvLink = document.getElementById('purpletv-link');
+        const mobileURL = 'media-mobile.html'; // URL of the mobile-specific page
+        const desktopURL = 'media.html';       // URL of the desktop page
+    
+        function updateLink() {
+            if (window.innerWidth <= 768) { // Adjust screen width as needed for "mobile"
+                purpletvLink.href = mobileURL;
+            } else {
+                purpletvLink.href = desktopURL;
+            }
+        }
+    
+        // Run on page load
+        updateLink();
+    
+        // Run on window resize to handle screen size changes
+        window.addEventListener('resize', updateLink);
+    });
+    
+
     function makeDraggable(element) {
         const header = element.querySelector(".window-header");
         let offsetX, offsetY;
