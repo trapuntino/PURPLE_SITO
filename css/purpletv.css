@@ -52,8 +52,8 @@
 body {
     font-family: 'Vulf';
     line-height: 1.6;
-    background-color: #F20089 !important;
-    color: #000000 !important;
+    background-color: #212529 !important;
+    color: #fafafa !important;
     overflow-x: hidden;
 }
 
@@ -89,7 +89,7 @@ a.btn {
     font-family: 'Vulf';
     /* Custom font */
     font-weight: 700;
-    background-color: #F20089 !important;
+    background-color: #212529 !important;
     border-bottom: 5px solid #000000;
     z-index: 1020;
 }
@@ -123,7 +123,7 @@ nav .nav-link {
 
 
 .offcanvas {
-    background-color: #F20089 !important;
+    background-color: #212529 !important;
     border: 5px solid #000000;
 }
 
@@ -318,19 +318,11 @@ header .btn-light:hover {
 
 
 
-footer {
-    background-color: #F20089 !important;
-    color: #ffffff;
-    /* Sets text color inside footer */
-    padding: 1rem 0;
-    /* Adds some vertical padding */
-    text-align: center;
-    /* Centers the text */
-}
+
 
 /* Footer styling */
 footer {
-    background-color: #F20089 !important;
+    background-color: #212529 !important;
     color: #ffffff !important;
     border-top: 5px solid #000000;
     padding: 1rem 0;
@@ -583,10 +575,6 @@ h1.scrolling-title {
 
 
 
-
-
-
-
 /* Ensure space between headings and paragraphs */
 h4 {
     margin-top: 10px;
@@ -595,4 +583,97 @@ h4 {
 
 p {
     margin-top: 5px;
+}
+
+
+
+/* Detail Card Overlay */
+.detail-card-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+}
+
+/* Detail Card Content */
+.detail-card-content {
+    background: #111;
+    padding: 20px;
+    max-width: 500px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    position: relative;
+    text-align: center;
+}
+
+.detail-thumbnail {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.detail-body {
+    color: #FFF;
+}
+
+.detail-title {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.detail-description {
+    font-size: 1rem;
+    color: #BBB;
+    margin-bottom: 20px;
+}
+
+.btn-play {
+    background-color: #0AF004;
+    color: #000;
+    font-size: 1rem;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Vulf', Arial, sans-serif;
+}
+
+.btn-play:hover {
+    background-color: #09C403;
+}
+
+/* Close Button */
+.close-detail-card, .close-modal {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 1.5rem;
+    color: #FFF;
+    cursor: pointer;
+}
+
+/* Video Modal */
+.video-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.9);
+    justify-content: center;
+    align-items: center;
+    z-index: 3000;
+}
+
+.video-modal video {
+    width: 90%;
+    max-width: 800px;
+    border-radius: 8px;
 }
