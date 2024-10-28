@@ -1,8 +1,16 @@
-/* Reels container with adjusted height for mobile */
+/* General styling */
+body, html {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+}
+
+/* Reels container */
 .reels-container {
     scroll-snap-type: y mandatory;
     overflow-y: scroll;
-    height: calc(100vh - 20px); /* Adjusted for mobile browser elements */
+    height: 100vh;
     display: flex;
     flex-direction: column;
 }
@@ -11,19 +19,19 @@
 .reel {
     scroll-snap-align: start;
     position: relative;
-    height: calc(100vh - 20px); /* Adjusted height */
+    height: calc(100vh - 80px); /* Shorter height to avoid overlap */
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-/* Overlay and Video remain unchanged */
 .reel-video {
     width: 100vw;
     height: 100%;
     object-fit: cover;
 }
 
+/* Overlay Text */
 .overlay {
     position: absolute;
     bottom: 20px;
@@ -34,9 +42,9 @@
     border-radius: 5px;
 }
 
-/* Media query for larger screens (optional, if only needed on mobile) */
-@media (min-width: 768px) {
-    .reels-container, .reel {
-        height: 100vh;
+/* Mobile-specific adjustment for video height */
+@media (max-width: 768px) {
+    .reel {
+        height: calc(100vh - 100px); /* Adjust further if necessary for mobile */
     }
 }
