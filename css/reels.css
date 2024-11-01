@@ -58,13 +58,13 @@ body, html {
     position: absolute;
     bottom: 100px;
     right: 80px;
-    color: #000000;
+    color: #ffffff;
     background: rgba(0, 0, 0, 1);
     padding: 7px 10px;
     font-size: 1.2rem;
     border-radius: 0px;
     font-weight: bold;
-    background-color: #F20089;
+    background-color: #000000;
     border: 5px solid #000000;
 }
 
