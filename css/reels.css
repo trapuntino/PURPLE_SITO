@@ -1,9 +1,31 @@
+@font-face {
+    font-family: 'Vulf';
+    src: url('font/VulfSans-Regular.woff2') format('woff2'),
+        url('font/VulfSans-Regular.woff') format('woff'),
+        url('font/VulfSans-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Vulf';
+    src: url('font/VulfSans-Bold.woff2') format('woff2'),
+        url('font/VulfSans-Bold.woff') format('woff'),
+        url('font/Vulf-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+
 /* General styling */
 body, html {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    font-family: Arial, sans-serif;
+    font-family: 'Vulf';
+    line-height: 1.6;
+    background-color: #F20089 !important;
+    color: #000000 !important;
 }
 
 /* Reels container */
@@ -34,12 +56,26 @@ body, html {
 /* Overlay Title Styling */
 .title-overlay {
     position: absolute;
-    bottom: 20px;
-    left: 20px;
-    color: #fff;
-    background: rgba(0, 0, 0, 0.6);
+    top: 20px;
+    left: 100px;
+    color: #000000;
+    background: rgba(0, 0, 0, 1);
     padding: 5px 10px;
     font-size: 1.2rem;
-    border-radius: 5px;
+    border-radius: 0px;
     font-weight: bold;
+    background-color: #F20089;
+    border: 5px solid #000000;
+}
+
+/* Studio Logo Styling */
+.studio-logo {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 60px; /* Adjust size as needed */
+    height: auto;
+    z-index: 2; /* Ensure it is above the video */
+    background-color: #F20089;
+    border: 5px solid #000000;
 }
