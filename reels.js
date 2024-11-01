@@ -1,6 +1,8 @@
+// Declare global audio state at the top level for global access
+let globalAudioEnabled = false; // Track global audio state
+
 document.addEventListener("DOMContentLoaded", () => {
     const videos = document.querySelectorAll('.reel-video');
-    let globalAudioEnabled = false; // Track global audio state
 
     // Intersection Observer to auto-play/pause videos in view
     const observer = new IntersectionObserver((entries) => {
@@ -21,10 +23,10 @@ document.addEventListener("DOMContentLoaded", () => {
     videos.forEach(video => observer.observe(video));
 });
 
-// Toggle global audio
+// Toggle global audio for all videos
 function toggleGlobalAudio() {
-    globalAudioEnabled = !globalAudioEnabled;
+    globalAudioEnabled = !globalAudioEnabled; // Toggle the global audio state
     document.querySelectorAll('.reel-video').forEach(video => {
-        video.muted = !globalAudioEnabled;
+        video.muted = !globalAudioEnabled; // Set each video's muted state
     });
 }
