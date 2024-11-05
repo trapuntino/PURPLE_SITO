@@ -65,51 +65,53 @@
         </nav>
 
         <main class="content-section">
-           
-<!-- Carousel Video Gallery -->
-<section class="carousel-gallery">
-    <div class="carousel-container">
-        <div class="carousel-row">
-            
-            <!-- Video Card 1 -->
-            <div class="video-card" onclick="openDetailCard('media/videos/video1.mp4', 'media/thumbnails/thumbnail1.jpg', 'Project Title 1', 'Description of Project Title 1')">
-                <div class="video-thumbnail-wrapper">
-                    <img src="projects/media_projects/images/BEFEST_V3.png" alt="Project Title 1" class="video-thumbnail">
+
+            <!-- Carousel Video Gallery -->
+            <section class="carousel-gallery">
+                <div class="carousel-container">
+                    <div class="carousel-row">
+
+                        <!-- Video Card 1 -->
+                        <div class="video-card"
+                            onclick="openDetailCard('media/purpletv/AAA.mov', 'media/purpletv/AAA.jpg', 'Project Title 1', 'Description of Project Title 1')">
+                            <div class="video-thumbnail-wrapper">
+                                <img src="media/purpletv/AAA.jpg" alt="Project Title 1" class="video-thumbnail">
+                            </div>
+                            <h3 class="video-title">Project Title 1</h3>
+
+                        </div>
+                        
+
+
+                        <!-- Repeat for more video cards -->
+                    </div>
                 </div>
-                <h3 class="video-title">Project Title 1</h3>
-            
-        </div>
-        
-        
-        <!-- Repeat for more video cards -->
-        </div>
-    </div>
-</section>
+            </section>
 
-<!-- Overlay Detail Card (Initially Hidden) -->
-<div id="detail-card" class="detail-card-overlay" onclick="closeDetailCard()">
-    <div class="detail-card-content">
-        <span class="close-detail-card" onclick="closeDetailCard()">&#10006;</span>
-        <img id="detail-thumbnail" src="" alt="Video Thumbnail" class="detail-thumbnail">
-        <div class="detail-body">
-            <h2 id="detail-title" class="detail-title"></h2>
-            <p id="detail-description" class="detail-description"></p>
-            <button class="btn-play" onclick="playVideo()">Play</button>
-        </div>
-    </div>
-</div>
+            <!-- Overlay Detail Card (Initially Hidden) -->
+            <div id="detail-card" class="detail-card-overlay" onclick="closeDetailCard()">
+                <div class="detail-card-content">
+                    <span class="close-detail-card" onclick="closeDetailCard()">&#10006;</span>
+                    <img id="detail-thumbnail" src="" alt="Video Thumbnail" class="detail-thumbnail">
+                    <div class="detail-body">
+                        <h2 id="detail-title" class="detail-title"></h2>
+                        <p id="detail-description" class="detail-description"></p>
+                        <button class="btn-play" onclick="playVideo()">Play</button>
+                    </div>
+                </div>
+            </div>
 
-<!-- Video Modal for Playing Videos Full Screen -->
-<div id="video-modal" class="video-modal" onclick="closeVideoModal()">
-    <video id="modal-video" controls autoplay></video>
-    <span class="close-modal" onclick="closeVideoModal()">&#10006;</span>
-</div>
+            <!-- Video Modal for Playing Videos Full Screen -->
+            <div id="video-modal" class="video-modal" onclick="closeVideoModal()">
+                <video id="modal-video" controls autoplay></video>
+                <span class="close-modal" onclick="closeVideoModal()">&#10006;</span>
+            </div>
 
 
 
 
         </main>
-    
+
         <div id="video-modal" class="video-modal" onclick="closeVideoModal()">
             <div class="modal-content">
                 <span class="close-modal" onclick="closeVideoModal()">&#10006;</span>

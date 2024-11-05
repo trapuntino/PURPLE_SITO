@@ -520,6 +520,10 @@ h1.benvenuto {
     border: 5px solid #000000;
 }
 
+.bordozzo {
+    border-bottom: 5px solid #000000;
+}
+
 .bordosez {
     background-color:  #D900B8;  
     border-left: 5px solid #000000;
@@ -577,6 +581,22 @@ h1.benvenuto {
 h1.scrolling-title {
     padding: 0 0.5rem; /* Add spacing between the repeated phrases */
     white-space: nowrap; /* Prevent the text from wrapping */
+}
+
+.purpletv {
+
+    background-color: #212529 !important;
+    color: #ffffff !important;
+    border: 5px solid #000000;
+    overflow-x: hidden;
+}
+
+.about {
+
+    background-color: #F20089 !important;
+    color: #000000 !important;
+    border: 5px solid #000000;
+    overflow-x: hidden;
 }
 
 

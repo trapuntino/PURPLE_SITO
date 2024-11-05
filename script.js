@@ -174,3 +174,22 @@ document.addEventListener("DOMContentLoaded", () => {
 
     
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+    const watchNowBtn = document.getElementById('watch-now-btn');
+
+    function updateLink() {
+        if (window.innerWidth <= 768) { // Adjust this value for your mobile breakpoint
+            watchNowBtn.href = 'media-mobile.html';
+        } else {
+            watchNowBtn.href = 'media.html';
+        }
+    }
+
+    // Run the function on page load
+    updateLink();
+
+    // Run the function on window resize to handle resizing the browser
+    window.addEventListener('resize', updateLink);
+});
+
