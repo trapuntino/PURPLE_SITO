@@ -109,8 +109,40 @@ nav .nav-link {
     font-weight: 700;
 }
 
-/* Customize dropdown menu color */
+.custom-toggle-icon {
+    width: 30px; /* Adjust the width as needed */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Ensures the image is displayed correctly */
+    
+}
 
+.custom-close-icon {
+    width: 20px; /* Adjust icon size as needed */
+    height: auto;
+}
+
+.offcanvas-header button {
+    margin-left: auto; /* Pushes the button to the right */
+    display: flex;
+    align-items: right; /* Centers the image vertically within the button */
+    border: none !important; 
+    background-color: transparent !important; 
+    outline: none !important; 
+    box-shadow: none !important; 
+}
+
+
+.navbar-toggler .navbar-toggler-icon {
+    display: none; /* Hide the default Bootstrap icon */
+    
+}
+
+.navbar-toggler {
+    border: none !important; 
+    background-color: transparent !important; 
+    outline: none !important; 
+    box-shadow: none !important; 
+}
 
 
 #offcanvasNavbar.offcanvas {

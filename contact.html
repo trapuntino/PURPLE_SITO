@@ -13,46 +13,53 @@
 <body>
 
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg sticky-top bg-body-tertiary">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="index.html">
-                <img src="media/images/LOGO.png" alt="Logo" width="70" height="70"
-                    class="d-inline-block align-text-top">
-            </a>
+   <nav class="navbar navbar-expand-lg sticky-top bg-body-tertiary">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="index.html">
+            <img src="media/images/LOGO.png" alt="Logo" width="70" height="70"
+                class="d-inline-block align-text-top">
+        </a>
 
-            <!-- Toggle button for off-canvas menu on mobile -->
-            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
-                data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+        <!-- Toggle button for off-canvas menu on mobile -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+            <img src="media/images/OFFCANVAS.webp" alt="Toggle navigation" class="custom-toggle-icon">
+        </button>
 
-            <!-- Navbar links for desktop view -->
-            <div class="collapse navbar-collapse d-none d-lg-flex">
-                <ul class="navbar-nav ms-auto">
+
+
+
+
+
+        <!-- Navbar links for desktop view -->
+        <div class="collapse navbar-collapse d-none d-lg-flex">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"> <a class="nav-link" href="projects.html">Projects</a> </li>
+                <li class="nav-item"> <a class="nav-link" href="media.html">PurpleTV</a> </li>
+                <li class="nav-item"> <a class="nav-link" href="about.html">About</a> </li>
+                <li class="nav-item"> <a class="nav-link" href="contact.html">Contact</a> </li>
+            </ul>
+        </div>
+
+        <!-- Off-canvas menu for mobile view -->
+        <div class="offcanvas offcanvas-end d-lg-none" tabindex="-1" id="offcanvasNavbar"
+            aria-labelledby="offcanvasNavbarLabel">
+            <div class="offcanvas-header">
+                <button type="button" data-bs-dismiss="offcanvas" aria-label="Close">
+                    <img src="media/images/OFFCANVAS_CLOSER.webp" alt="Close" class="custom-close-icon">
+                </button>
+            </div>
+            <div class="offcanvas-body">
+                <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
                     <li class="nav-item"> <a class="nav-link" href="projects.html">Projects</a> </li>
-                    <li class="nav-item"> <a class="nav-link" href="media.html">PurpleTV</a> </li>
+                    <li class="nav-item"> <a class="nav-link" href="media-mobile.html">PurpleTV</a> </li>
                     <li class="nav-item"> <a class="nav-link" href="about.html">About</a> </li>
                     <li class="nav-item"> <a class="nav-link" href="contact.html">Contact</a> </li>
                 </ul>
             </div>
-
-            <!-- Off-canvas menu for mobile view -->
-            <div class="offcanvas offcanvas-end d-lg-none" tabindex="-1" id="offcanvasNavbar"
-                aria-labelledby="offcanvasNavbarLabel">
-                <div class="offcanvas-header">
-                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                </div>
-                <div class="offcanvas-body">
-                    <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-                        <li class="nav-item"> <a class="nav-link" href="projects.html">Projects</a> </li>
-                        <li class="nav-item"> <a class="nav-link" href="media-mobile.html">PurpleTV</a> </li>
-                        <li class="nav-item"> <a class="nav-link" href="about.html">About</a> </li>
-                        <li class="nav-item"> <a class="nav-link" href="contact.html">Contact</a> </li>
-                    </ul>
-                </div>
-            </div>
         </div>
-    </nav>
+    </div>
+</nav>
 
     <div class="container my-5">
         <h1 class="benvenuto">Start your journey with Us</h1>
